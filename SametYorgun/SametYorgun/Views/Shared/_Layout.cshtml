@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from bostamihtml.ibthemespro.com/aboutOne.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Oct 2022 13:08:26 GMT -->
+@await Html.PartialAsync("~/Views/LayoutPartials/Head/HeadStyles.cshtml")
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader_line"></div>
+    </div>
+    <!-- /PRELOADER -->
+
+    <div class="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+        <div class="section-bg">
+            <div class="w-full flex justify-between px-4">
+                <!-- website Logo -->
+              @*  <a href="index.html">
+                    <img class="h-[26px] lg:h-[32px]" src="~/kisisel/images/logo/logo.png" alt="logo" />
+                </a>*@
+                <div class="flex items-center">
+                    <!-- dark and light mode toggle -->
+                  @*  <button id="theme-toggle" type="button" class="dark-light-btn">
+                        <i id="theme-toggle-dark-icon" class="fa-solid text-xl fa-moon hidden"></i>
+                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl hidden"></i>
+                    </button>*@
+                    <!-- mobile toggle button -->
+                    <button id="menu-toggle" type="button" class="menu-toggle-btn">
+                        <i id="menu-toggle-open-icon" class="fa-solid fa-bars text-xl "></i>
+                        <i id="menu-toggle-close-icon" class="fa-solid fa-xmark text-xl hidden  "></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile menu start -->
+        <nav id="navbar" class="hidden lg:hidden">
+            <ul class="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]">
+                <li>
+                    <a class="mobile-menu-items-active" href="/Home/Index">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-regular fa-user"></i>
+                        </span>Hakkımda
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="/Home/OzGecmis">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </span>ÖzGeçmiş
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="/Home/Projeler">
+                        <span class="mr-2 text-xl">
+                            <i class="fas fa-briefcase"></i>
+                        </span>Projeler
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="/Home/Blog">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-brands fa-blogger"></i>
+                        </span>Blog
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="/Home/Contact">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-solid fa-address-book"></i>
+                        </span> İletişim
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- mobile menu end -->
+
+        <div class="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
+            <!-- sidber personal info -->
+            @await Component.InvokeAsync("KisiselBilgiler")
+            <div class="col-span-12 lg:col-span-8">
+                <!-- header for mobile devices start -->
+                <header class="lg:w-[560px] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]">
+                    <nav class="hidden lg:block">
+                        <ul class="flex">
+                            <li>
+                                <a class="menu-active" href="/Home/Index">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-regular fa-user"></i>
+                                    </span> Hakkımda
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="/Home/OzGecmis">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-regular fa-file-lines"></i>
+                                    </span> ÖzGeçmiş
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="/Home/Projeler">
+                                    <span class="text-xl mb-1">
+                                        <i class="fas fa-briefcase"></i>
+                                    </span> Projeler
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="/Home/Blog">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-brands fa-blogger"></i>
+                                    </span> Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="/Home/Contact">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-solid fa-address-book"></i>
+                                    </span> İletişim
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <!-- header for mobile devices end -->
+                <!-- about me section start -->
+                <div>
+                    <div class="lg:rounded-2xl bg-white dark:bg-[#111111]">
+                        <div class="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
+                           @await Component.InvokeAsync("MobilKisiselBilgiler")
+                        </div>
+                            @RenderBody()
+                        <!-- footer start -->
+                        <footer class="overflow-hidden rounded-b-2xl" style="background: transparent">
+                            <p class="text-center py-6 text-gray-lite dark:text-color-910">
+                                © 2022 tüm hakları saklıdır -Samet Yorgun
+                                by <a class="hover:text-[#FA5252] duration-300 transition"
+                                      href="https://themeforest.net/user/ib-themes" target="_blank"
+                                      rel="noopener noreferrer"></a>.
+                            </p>
+                        </footer>
+                        <!-- footer section end -->
+                    </div>
+                </div>
+
+                <!-- about me section start -->
+            </div>
+        </div>
+    </div>
+    <!-- End bgHomeBg -->
+    <!--==== js =====-->
+    <script src="~/kisisel/js/vendor/jquary.min.js"></script>
+    <script src="~/kisisel/js/vendor/slick.js"></script>
+    <!-- main js -->
+    <script src="~/kisisel/js/main.js"></script>
+</body>
+
+
+<!-- Mirrored from bostamihtml.ibthemespro.com/aboutOne.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Oct 2022 13:08:34 GMT -->
+</html>

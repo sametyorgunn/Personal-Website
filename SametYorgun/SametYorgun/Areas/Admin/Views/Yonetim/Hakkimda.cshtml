@@ -1,0 +1,25 @@
+﻿@model SametYorgun.Models.Hakkimda
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hakkimda</title>
+</head>
+<body>
+    <a href="/Admin/Yonetim/Index">Anasayfa dön</a>
+
+     <form method="post" enctype="multipart/form-data">
+
+        <label hidden for="lname">id:</label><br>
+        <input hidden type="text" id="lname" name="Id" value="@Model.Id"><br><br>
+
+        <label for="lname">içerik:</label><br>
+        <textarea type="text" id="lname" name="HakkimdaIcerik">@Model.HakkimdaIcerik</textarea><br><br>
+
+ 
+        <input type="submit" value="kaydet">
+    </form>
+</body>
+</html>

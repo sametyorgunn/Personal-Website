@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Blog</title>
+</head>
+<body>
+    <a href="/Admin/Yonetim/Index">Anasayfa dön</a>
+
+     <form method="post" enctype="multipart/form-data">
+
+        <label for="lname">Blog Başlık:</label><br>
+        <input type="text" id="lname" name="BlogAdi"><br><br>
+
+        <label for="lname">içerik:</label><br>
+        <textarea type="text" id="lname" name="BlogIcerik" ></textarea><br><br>
+
+        <label for="lname">resim:</label><br>
+        <input type="file" id="lname" name="BlogResim"><br><br>
+
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

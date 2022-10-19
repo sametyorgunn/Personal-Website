@@ -1,0 +1,55 @@
+﻿@using SametYorgun.Models
+@model KisiselBilgi
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>KisiselBilgiler</title>
+</head>
+<body>
+    <a href="/Admin/Yonetim/Index">Anasayfa dön</a>
+
+    <form method="post" enctype="multipart/form-data">
+        <label hidden for="fname">id</label><br>
+        <input hidden type="text" id="fname" name="Id" value="@Model.Id"><br>
+
+        <label for="lname">isim:</label><br>
+        <input type="text" id="lname" name="Isim" value="@Model.Isim"><br><br>
+
+        <label for="fname">ünvan:</label><br>
+        <input type="text" id="fname" name="Unvan" value="@Model.Unvan"><br>
+
+        <label for="lname">github:</label><br>
+        <input type="text" id="lname" name="Github" value="@Model.Github"><br><br>
+
+        <label for="fname">linkedin:</label><br>
+        <input type="text" id="fname" name="Linkedin" value="@Model.Linkedin"><br>
+
+        <label for="lname">instagram:</label><br>
+        <input type="text" id="lname" name="Instagram" value="@Model.Instagram"><br><br>
+
+         <label for="fname">Telefon:</label><br>
+        <input type="tel" id="fname" name="Telefon" value="@Model.Telefon"><br>
+
+        <label for="lname">Mail:</label><br>
+        <input type="email" id="lname" name="Mail" value="@Model.Mail"><br><br>
+
+        <label for="fname">adres:</label><br>
+        <input type="text" id="fname" name="Adres" value="@Model.Adres"><br>
+
+        <label for="lname">Doğum Tarihi:</label><br>
+        <input type="text" id="lname" name="DogumTarihi" value="@Model.DogumTarihi"><br><br>
+
+        <label for="fname">Profil Resim:</label><br>
+        <input type="file" id="fname" name="ProfilResim" value=""><br>
+
+        <label for="lname">Cv:</label><br>
+        <input type="file" id="lname" name="Cv" value=""><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

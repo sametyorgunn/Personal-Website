@@ -1,0 +1,50 @@
+﻿@model List<SametYorgun.Models.Blog>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<a href="/Admin/Yonetim/Index">Anasayfa dön</a>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>blog adı</th>
+    <th>durumu</th>
+    <th>pasif yap</th>
+    <th>aktif yap</th>
+  </tr>
+  @foreach(var i in Model)
+  {
+  <tr>
+    <td hidden>@i.Id</td>
+    <td>@i.BlogAdi</td>
+    <td>@i.Status</td>
+    <td><a href="/Admin/Yonetim/BlogPasifYap/@i.Id">pasif yap</a></td>
+    <td><a href="/Admin/Yonetim/BlogAktifYap/@i.Id">aktif yap</a></td>
+
+  </tr>
+  }
+</table>
+
+</body>
+</html>
+
